@@ -1,0 +1,25 @@
+### Tutte le persone
+GET https://phonebook-c5jz.onrender.com/api/persons
+
+### Una persona
+GET https://phonebook-c5jz.onrender.com/api/persons/1
+
+### Aggiungere una persona
+POST https://phonebook-c5jz.onrender.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Test Online",
+  "number": "123-456789"
+}
+
+### Errore: numero mancante (deve dare 400)
+POST https://phonebook-c5jz.onrender.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Senza Numero"
+}
+
+### Eliminare una persona
+DELETE https://phonebook-c5jz.onrender.com/api/persons/2
