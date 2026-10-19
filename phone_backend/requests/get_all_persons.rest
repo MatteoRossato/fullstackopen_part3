@@ -1,0 +1,23 @@
+GET http://localhost:3001/api/persons/1
+
+###
+GET http://localhost:3001/api/persons/5
+
+###
+GET http://localhost:3001/api/persons
+
+###
+DELETE http://localhost:3001/api/persons/2
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Emy puzzona",
+  "number": "39-34-5323577"
+}
+
+###
+GET http://localhost:3001/api/persons/api/persons
