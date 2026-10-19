@@ -16,6 +16,7 @@ morgan.token('body', (request) => {
 
 //da il timbro CORS, deve essere messo prima in modo che richieste siano valide
 app.use(cors())
+app.use(express.static('dist'))
 //middleware per leggere corpo delle richieste che altrimenti sarebbero undefined
 app.use(express.json())
 //modalità tiny prende informazione delle richieste (c'era tiny poi cambiato e aggiunto anche :body)
