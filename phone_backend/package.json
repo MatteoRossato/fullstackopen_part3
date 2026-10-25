@@ -6,13 +6,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "build:ui": "rm -rf dist && cd ../ThePhonebook && npm run build && cp -r dist ../phone_backend",
+    "deploy:full": "npm run build:ui && git add -A && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ross",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
     "express": "^5.3.0",
+    "mongoose": "^9.11.4",
     "morgan": "^1.12.1"
   }
 }
